@@ -1,11 +1,17 @@
-"use client"
 import "../public/template/css/styles.css";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "",
+    default: "Next.JS 14",
+    template: "",
+  },
+  description: "Learning Next JS 14",
+};
 
 export default function RootLayout({children}: {children: React.ReactNode},) {
-
-  const pathName = usePathname();
 
   return (
     <html lang="en">
@@ -19,22 +25,22 @@ export default function RootLayout({children}: {children: React.ReactNode},) {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link href="/" className={`nav-link ${pathName === "/" ? "active" : ""}`}>
+                  <Link href="/" className="nav-link">
                   Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/about" className={`nav-link ${pathName === "/about" ? "active" : ""}`}>
+                  <Link href="/about" className="nav-link">
                   About
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/contact" className={`nav-link ${pathName === "/contact" ? "active" : ""}`}>
+                  <Link href="/contact" className="nav-link">
                   Contact
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/blog" className={`nav-link ${pathName === "/blog" ? "active" : ""}`}>
+                  <Link href="/blog" className="nav-link">
                   Blog
                   </Link>
                 </li>

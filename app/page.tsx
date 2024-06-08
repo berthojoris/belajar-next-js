@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "Home Pages",
+};
 
 export default function Home() {
   return (
