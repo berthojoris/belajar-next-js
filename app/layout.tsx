@@ -1,16 +1,11 @@
+'use client'
+import { usePathname } from 'next/navigation'
 import "../public/template/css/styles.css";
 import Link from "next/link";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: {
-    absolute: "",
-    default: "Next.JS 14",
-    template: "",
-  },
-};
 
 export default function RootLayout({children}: {children: React.ReactNode},) {
+
+  const pathname = usePathname()
 
   return (
     <html lang="en">
@@ -24,27 +19,27 @@ export default function RootLayout({children}: {children: React.ReactNode},) {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link href="/" className="nav-link">
-                  Home
+                  <Link className={`nav-link ${pathname === '/' ? 'active' : ''}`} href="/">
+                    Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/about" className="nav-link">
-                  About
+                  <Link className={`nav-link ${pathname === '/about' ? 'active' : ''}`} href="/about">
+                    About
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/contact" className="nav-link">
-                  Contact
+                  <Link className={`nav-link ${pathname === '/contact' ? 'active' : ''}`} href="/contact">
+                    Contact
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/blog" className="nav-link">
-                  Blog
+                  <Link className={`nav-link ${pathname === '/blog' ? 'active' : ''}`} href="/blog">
+                    Blog
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/blog/lapar-coi" className="nav-link">
+                  <Link className={`nav-link ${pathname === '/blog/tahun-2024-harga-update' ? 'active' : ''}`} href="/blog/tahun-2024-harga-update">
                   Blog Detail
                   </Link>
                 </li>
