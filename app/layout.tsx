@@ -8,7 +8,6 @@ export const metadata: Metadata = {
     default: "Next.JS 14",
     template: "",
   },
-  description: "Learning Next JS 14",
 };
 
 export default function RootLayout({children}: {children: React.ReactNode},) {
