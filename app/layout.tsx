@@ -1,30 +1,14 @@
 "use client"
-import type { Metadata } from "next";
-import Head from "next/head";
 import "../public/template/css/styles.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({children}: {children: React.ReactNode},) {
 
   const pathName = usePathname();
 
   return (
     <html lang="en">
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Create Next App </title>
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-        <link href="/template/css/styles.css" rel="stylesheet" />
-      </Head>
       <body>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container">
@@ -62,7 +46,7 @@ export default function RootLayout({
           {children}
         </div>
         <footer className="py-5 bg-dark">
-          <div className="container"><p className="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+          <div className="container"><p className="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="/template/js/scripts.js"></script>
