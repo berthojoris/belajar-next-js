@@ -44,6 +44,11 @@ export default function RootLayout({children}: {children: React.ReactNode},) {
                   Blog
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link href="/blog/lapar-coi" className="nav-link">
+                  Blog Detail
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
